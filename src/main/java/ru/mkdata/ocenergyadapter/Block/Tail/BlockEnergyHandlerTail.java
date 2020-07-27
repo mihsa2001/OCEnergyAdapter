@@ -23,7 +23,7 @@ public class BlockEnergyHandlerTail extends TileEntity implements SimpleComponen
 
     @Override
     public String getComponentName() {
-        return "fancy_thing";
+        return "ocenergyadapter";
     }
 
     @Callback
