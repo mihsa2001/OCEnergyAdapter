@@ -1,6 +1,6 @@
 package ru.mkdata.ocenergyadapter.Block.Tail;
 
-import cofh.redstoneflux.api.IEnergyHandler;
+import com.brandon3055.draconicevolution.api.IExtendedRFStorage;
 import li.cil.oc.api.machine.Arguments;
 import li.cil.oc.api.machine.Callback;
 import li.cil.oc.api.machine.Context;
@@ -48,10 +48,10 @@ public class BlockEnergyHandlerTail extends TileEntity implements SimpleComponen
         tileEntityList.add(this.world.getTileEntity(this.pos.east()));
         tileEntityList.add(this.world.getTileEntity(this.pos.north()));
         for (TileEntity ent : tileEntityList) {
-            if (ent instanceof IEnergyHandler) {
-                IEnergyHandler UpEntity = ((IEnergyHandler) ent);
-                stored = UpEntity.getEnergyStored(null);
-                maxEnergy = UpEntity.getMaxEnergyStored(null);
+            if (ent instanceof IExtendedRFStorage) {
+                IExtendedRFStorage UpEntity = ((IExtendedRFStorage) ent);
+                stored = UpEntity.getExtendedStorage();
+                maxEnergy = UpEntity.getExtendedCapacity();
             }
         }
     }

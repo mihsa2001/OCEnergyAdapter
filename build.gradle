@@ -39,7 +39,7 @@ repositories {
 dependencies {
     deobfCompile "cofh:RedstoneFlux:1.12-2.0.2.3:universal"
 /*    implementation "com.github.brandon3055:Draconic-Evolution:1.12.2-SNAPSHOT"*/
-    /*deobfCompile name: "OpenComputers_MC1.12.2_1.7.5.192"*/
+    deobfCompile name: "Draconic-Evolution-1.12.2-2.3.24.349-deobf"
 }
 
 minecraft {
@@ -97,7 +97,7 @@ processResources {
         exclude 'mcmod.info'
     }
 }
-apply plugin: 'idea'
+/*apply plugin: 'idea'
 idea {
     module {
         inheritOutputDirs = true
@@ -113,4 +113,4 @@ task prepareAssets(type: Copy) {
     into project.file('build/classes/java/main')
 }
 
-classes.dependsOn(prepareAssets)
+classes.dependsOn(prepareAssets)*/
